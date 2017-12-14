@@ -7,7 +7,7 @@ public class Disk implements Comparable<Disk> {
 	private int radius;
 	/**
 	* 
-	* creates a default Disk with a radius of 0
+	* Creates a default Disk with a radius of 0
 	* 
 	* @param none
 	* @return none
@@ -17,7 +17,7 @@ public class Disk implements Comparable<Disk> {
 	}
 	/**
 	* 
-	* creates a Disk with the radius r
+	* Creates a Disk with the radius r
 	* 
 	* @param r is the radius of the disk
 	* @return none
@@ -29,7 +29,7 @@ public class Disk implements Comparable<Disk> {
 	}
 	/**
 	* 
-	* returns an String that shows what the object is
+	* Returns a String that shows what the object is
 	* 
 	* @param none
 	* @return a String visualization of the Disk as 2*r of "*" or if the radius is 0 then just "*"
@@ -47,7 +47,7 @@ public class Disk implements Comparable<Disk> {
 	}
 	/**
 	* 
-	* returns the radius
+	* Returns the radius
 	* 
 	* @param none
 	* @return radius of the Disk
@@ -57,7 +57,7 @@ public class Disk implements Comparable<Disk> {
 	}
 	/**
 	* 
-	* returns an int representation of the difference between 'this' and 'other'
+	* Returns an int representation of the difference between 'this' and 'other'
 	* 
 	* @param other is the Disk you want to compare
 	* @return an int representation of the difference between 'this' and 'other'

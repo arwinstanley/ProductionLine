@@ -12,7 +12,7 @@ public class ProductionLine{
 	private Queue<Tower> outQ;
 	/**
 	* 
-	* creates a default Production Line and initializes the fields
+	* Creates a default Production Line and initializes the fields
 	* 
 	* @param none
 	* @return none
@@ -24,7 +24,7 @@ public class ProductionLine{
 	}
 	/**
 	* 
-	* adds a disk to the inQ
+	* Adds a disk to the inQ
 	* 
 	* @param x the disk you want to add
 	* @return none
@@ -34,7 +34,7 @@ public class ProductionLine{
 	}
 	/**
 	* 
-	* takes the working Tower, flips it, and places it in OutQ
+	* Takes the working Tower, flips it, and places it in OutQ
 	* 
 	* @param none
 	* @return none
@@ -46,16 +46,17 @@ public class ProductionLine{
 	}
 	/**
 	* 
-	* adds all of the Disks from inQ into Towers and then puts them in OutQ
+	* Adds all of the Disks from inQ into Towers and then puts them in OutQ
 	* 
 	* @param none
 	* @return none
 	*/
 	public void process() {
 		while(!(inQ.isEmpty())) {
-			Disk add = inQ.remove();
-			if( invertedTower.isEmpty() || add.compareTo(invertedTower.peek()) == 1 ) {  
-				invertedTower.push(add);
+			
+			if( invertedTower.isEmpty() || inQ.peek().compareTo(invertedTower.peek()) == 1 ) {  
+				invertedTower.stackDisk(inQ.remove());
+			
 			}
 			else {
 				unloadRobot();
@@ -65,7 +66,7 @@ public class ProductionLine{
 	}
 	/**
 	* 
-	* removes a Tower from outQ and returns it
+	* Removes a Tower from outQ and returns it
 	* 
 	* @param none
 	* @return Tower the Tower you just removed from OutQ
